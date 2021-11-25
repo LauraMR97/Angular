@@ -1,1 +1,9 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid" style="background-color:#fef58f;">
+        <a class="nav-link active" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/" class="navbar-brand">Animal Crossing App<img class="logo" width="50px" src="{{imgLogo}}" alt="Logo app"/></a>
+        <form class="d-flex">
+            <a class="nav-link active" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact: true}"><button class="btn btn-outline-success" type="submit">Home</button></a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/animal-crossing/catalogo" [routerLinkActiveOptions]="{exact: true}"><button class="btn btn-outline-success" type="submit">Catalogo</button></a>
+        </form>
+    </div>
+</nav>

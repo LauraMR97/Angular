@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DescriptionComponent implements OnInit {
 
-  constructor() { }
+  public title : string;
+  public imagen: string;
 
+  constructor() {
+    this.title='Animal Crossing New Horizons';
+    this.imagen='../assets/acnh.jpeg';
+   }
   ngOnInit(): void {
+
   }
 
 }
