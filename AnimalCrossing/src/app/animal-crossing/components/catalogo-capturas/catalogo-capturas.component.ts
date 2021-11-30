@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestAnimalCatalogoService } from '../../services/rest-animal-catalogo.service';
 
 @Component({
   selector: 'app-catalogo-capturas',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogoCapturasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private restCatalogoService: RestAnimalCatalogoService) { }
 
   ngOnInit(): void {
+    this.getCatalogo();
   }
 
+  public getCatalogo(){
+    this.restCatalogoService.getCatalogo().subscribe((response)=>{
+console.log(response);
+    });
+  }
 }
