@@ -1,0 +1,12 @@
+button {
+    background-color: #b02261;
+    &.oscuro {
+        background-color: #642327;
+        &:hover {
+            background-color: #b04746;
+        }
+    }
+    &:hover {
+        background-color: #37bac4;
+    }
+}
