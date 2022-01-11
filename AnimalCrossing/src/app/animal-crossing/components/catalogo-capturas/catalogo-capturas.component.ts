@@ -16,7 +16,7 @@ export class CatalogoCapturasComponent implements OnInit {
 
   public getCatalogo(){
     this.restCatalogoService.getCatalogo().subscribe((response)=>{
-console.log(response);
+    console.log(response);
     });
   }
 }
