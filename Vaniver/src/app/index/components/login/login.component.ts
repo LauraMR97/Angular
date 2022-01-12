@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public imgLogo: string;
+  constructor() {
+    this.imgLogo="../assets/vestido.png";
+   }
+
 
   ngOnInit(): void {
   }

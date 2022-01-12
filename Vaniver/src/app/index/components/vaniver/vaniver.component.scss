@@ -1,5 +1,7 @@
 button {
     background-color: #b02261;
+    color: white;
+    border-color: black;
     &.oscuro {
         background-color: #642327;
         &:hover {

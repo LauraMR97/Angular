@@ -7,6 +7,7 @@ import {RegistroComponent } from './components/registro/registro.component';
 import {QuienComponent } from './components/quien/quien.component';
 import {TrabajoComponent } from './components/trabajo/trabajo.component';
 import {ComprasComponent } from './components/compras/compras.component';
+import { ProducuctoComponent } from './components/producucto/producucto.component';
 
 
 
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path:'compras',
     component:ComprasComponent
+  },
+  {
+    path:'producto',
+    component:ProducuctoComponent
   },
 
 ];

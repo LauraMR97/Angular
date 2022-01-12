@@ -9,6 +9,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { TrabajoComponent } from './components/trabajo/trabajo.component';
 import { QuienComponent } from './components/quien/quien.component';
 import { ComprasComponent } from './components/compras/compras.component';
+import { ProducuctoComponent } from './components/producucto/producucto.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ComprasComponent } from './components/compras/compras.component';
     ContactoComponent,
     TrabajoComponent,
     QuienComponent,
-    ComprasComponent
+    ComprasComponent,
+    ProducuctoComponent
   ],
   imports: [
     CommonModule,
