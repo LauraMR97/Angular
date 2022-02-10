@@ -1,0 +1,92 @@
+@font-face {
+    font-family: MagicalMistery;
+    src: url(./assets/MagicalMystery.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: PTSerif;
+    src: url(./assets/PTSerif-Regular.ttf) format("opentype");
+}
+
+h1,
+h2 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: MagicalMistery;
+}
+
+p,
+label {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: PTSerif;
+}
+
+.fondoGeneral {
+    background-color: #e2cddc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+label {
+    color: #b02261;
+    &.oscuro {
+        color: #0c0506;
+    }
+}
+
+.tituloLogo {
+    background: linear-gradient(rgb(135, 53, 230), rgb(255, 0, 200));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px #000000);
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.fondoHeaderYFooter {
+    background-color: #5d498b;
+    color: white;
+    a {
+        color: white;
+        &:hover {
+            color: rgb(219, 122, 206);
+        }
+    }
+}
+
+.fondoNav {
+    background-color: #f7a0dd;
+    color: white;
+}
+
+.fondo {
+    background-color: #000000;
+}
+
+
+/*------------------------------------*/
+
+.fondoGeneralOscuro {
+    background-color: #e5d7d1;
+}
+
+.tituloLogoOscuro {
+    background: linear-gradient(#e5d7d1, #b04746);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px #000000);
+}
+
+.fondoHeaderYFooterOscuros {
+    background-color: #351114;
+    color: #e5d7d1;
+}
