@@ -5,7 +5,7 @@
             <div class="col-11 col-sm-11 col-md-11 col-lg-11">
                 <div class="p-3">
                     <div class="row">
-                        <h1 class="tituloLogo"><img class="col-4 col-sm-3 col-md-2 col-lg-1" src="{{imgLogo}}"> Modas Vaniver</h1>
+                        <h1 class="tituloLogo"><img alt="titulo" class="col-4 col-sm-3 col-md-2 col-lg-1" src="{{imgLogo}}"> Modas Vaniver</h1>
                     </div>
                 </div>
             </div>
@@ -42,10 +42,10 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg></button>
+                    </svg>Buscar</button>
                         <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                       <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg></button>
+                    </svg>Perfil</button>
                     </form>
                     <form class="d-flex">
 
@@ -55,76 +55,68 @@
         </nav>
 
         <main>
-            <section class="row fondoGeneral pt-5 pb-5">
-                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-                    <div class="row d-flex justify-content-center">
-                        <img class="col-3 col-sm-3 col-md-3 col-lg-3">
-                    </div>
-                </div>
-
-                <div class="row d-flex justify-content-center">
-                    <div class="col-12">
-                        <h1 class=" text-center col-12 col-sm-12 col-md-12 col-lg-12">Registro:</h1>
-                        <form>
-                            <div class="row justify-content-center pt-4">
-                                <div class="col-7 col-sm-10 col-md-3 col-lg-3">
-                                    <label class="form-label">Nombre:</label>
-                                    <input class="form-control" value="" type="text">
-                                </div>
-
-                                <div class="col-7 col-sm-10 col-md-3 col-lg-3">
-                                    <label class="form-label">Apellido:</label>
-                                    <input class="form-control" value="" type="text">
-                                </div>
+            <section class="row fondoGeneral pt-5 pb-5  d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class=" text-center col-12 col-sm-12 col-md-12 col-lg-12">Registro:</h1>
+                    <form>
+                        <div class="row justify-content-center pt-4">
+                            <div class="col-7 col-sm-10 col-md-3 col-lg-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input aria-labelledby="nombre" title="nombre" id="nombre" placeholder="Inserta un Nombre" class="form-control" value="" type="text">
                             </div>
 
-                            <div class="row justify-content-center pt-4">
-                                <div class="col-7 col-sm-10 col-md-3 col-lg-3">
-                                    <label class="form-label">Correo:</label>
-                                    <input class="form-control" type="email" value="" aria-describedby="emailHelp">
-                                </div>
+                            <div class="col-7 col-sm-10 col-md-3 col-lg-3">
+                                <label for="apellido" class="form-label">Apellido:</label>
+                                <input aria-labelledby="apellido" title="apellido" id="apellido" placeholder="Inserta un Apellido" class="form-control" value="" type="text">
+                            </div>
+                        </div>
 
-                                <div class="col-7 col-sm-10 col-md-3 col-lg-3">
-                                    <label class="form-label">Teléfono:</label>
-                                    <input class="form-control" value="" type="number">
-                                </div>
+                        <div class="row justify-content-center pt-4">
+                            <div class="col-7 col-sm-10 col-md-3 col-lg-3">
+                                <label for="correo" class="form-label">Correo:</label>
+                                <input aria-labelledby="correo" title="correo" id="correo" placeholder="Inserta un Correo" class="form-control" type="email" value="">
                             </div>
 
-                            <div class="row justify-content-center pt-4">
-                                <div class="col-7 col-sm-10 col-md-3 col-lg-3">
-                                    <label class="form-label">Direccion:</label>
-                                    <input class="form-control" value="" type="text">
-                                </div>
+                            <div class="col-7 col-sm-10 col-md-3 col-lg-3">
+                                <label for="telefono" class="form-label">Teléfono:</label>
+                                <input aria-labelledby="telefono" placeholder="Inserta un Teléfono" title="telefono" id="telefono" class="form-control" value="" type="number">
+                            </div>
+                        </div>
 
-                                <div class="col-7 col-sm-10 col-md-3 col-lg-3">
-                                    <label class="form-label">Edad:</label>
-                                    <input class="form-control" value="" type="number">
-                                </div>
+                        <div class="row justify-content-center pt-4">
+                            <div class="col-7 col-sm-10 col-md-3 col-lg-3">
+                                <label for="direccion" class="form-label">Direccion:</label>
+                                <input aria-labelledby="direccion" title="direccion" id="direccion" placeholder="Inserta una Direccion" class="form-control" value="" type="text">
                             </div>
 
-                            <div class="row justify-content-center pt-4">
-                                <div class="col-7 col-sm-10 col-md-3 col-lg-3">
-                                    <label class="form-label">Contraseña:</label>
-                                    <input class="form-control" type="password" value="" aria-describedby="emailHelp">
-                                </div>
+                            <div class="col-7 col-sm-10 col-md-3 col-lg-3">
+                                <label for="edad" class="form-label">Edad:</label>
+                                <input aria-labelledby="edad" placeholder="Inserta una Edad" title="edad" id="edad" class="form-control" value="" type="number">
+                            </div>
+                        </div>
 
-                                <div class="col-7 col-sm-10 col-md-3 col-lg-3 pb-4">
-                                    <label class="form-label">Repite la Contraseña:</label>
-                                    <input class="form-control" type="password" value="" aria-describedby="emailHelp">
-                                </div>
+                        <div class="row justify-content-center pt-4">
+                            <div class="col-7 col-sm-10 col-md-3 col-lg-3">
+                                <label for="pass" class="form-label">Contraseña:</label>
+                                <input aria-labelledby="pass" title="pass" id="pass" placeholder="Inserta una Contraseña" class="form-control" type="password" value="">
                             </div>
 
-                            <div class="row pt-4 d-flex justify-content-center border-top border-white">
-                                <button class="col-12 col-sm-12 col-md-3 col-lg-2 btn btn-primary mb-2 mx-2" type="submit">Enviar</button>
+                            <div class="col-7 col-sm-10 col-md-3 col-lg-3 pb-4">
+                                <label for="pass2" class="form-label">Repite la Contraseña:</label>
+                                <input aria-labelledby="pass2" title="pass2" id="pass2" placeholder="Repite la Contraseña" class="form-control" type="password" value="">
                             </div>
+                        </div>
 
-                            <div class="row pt-4  pb-3 d-flex justify-content-center border-top border-white">
-                                <button class="col-12 col-sm-12 col-md-3 col-lg-2 btn btn-primary mb-2 mx-2" type="submit">Volver</button>
-                            </div>
+                        <div class="row pt-4 d-flex justify-content-center border-top border-white">
+                            <button class="col-12 col-sm-12 col-md-3 col-lg-2 btn btn-primary mb-2 mx-2" type="submit">Enviar</button>
+                        </div>
+
+                        <div class="row pt-4  pb-3 d-flex justify-content-center border-top border-white">
+                            <button class="col-12 col-sm-12 col-md-3 col-lg-2 btn btn-primary mb-2 mx-2" type="submit">Volver</button>
+                        </div>
 
 
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </section>
         </main>
