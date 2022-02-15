@@ -1,0 +1,20 @@
+<h1>Login</h1>
+<form [formGroup]="loginUsuario" (ngSubmit)="onSubmit()">
+
+    <label for="exampleInputEmail1">Correo:</label><br>
+    <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email"><br>
+    <div *ngIf="submitted && formulario['email'].errors">
+        <div *ngIf="formulario['email'].errors['required']">El email no puede estar vacio</div>
+        <div *ngIf="formulario['email'].errors['email']">El email debe ser un email valido</div>
+    </div><br>
+
+    <label for="exampleInputPassword1">Contraseña:</label><br>
+    <input type="password" id="exampleInputPassword1" formControlName="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+    <div *ngIf="submitted && formulario['password'].errors">
+        <div *ngIf="formulario['password'].errors['required']"> La contraseña no puede estar vacia</div>
+        <div *ngIf="formulario['password'].errors['pattern']">La contraseña debe tener al menos un dígito, una minúscula, una mayúscula y tener como mínimo 8 caracteres</div>
+    </div><br><br>
+
+
+    <input type="submit" value="Entrar" name="Entrar">
+</form>

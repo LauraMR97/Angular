@@ -1,0 +1,49 @@
+<h1>Editor de usuarios:</h1>
+<form [formGroup]="editForm">
+    <label for="exampleInputEmail1">Correo:</label><br>
+    <input value="{{this.perfil.persona.correo}}" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="correo">
+    <div *ngIf="submitted && formulario['correo'].errors">
+        <div *ngIf="formulario['correo'].errors['required']">El email no puede estar vacio</div>
+        <div *ngIf="formulario['correo'].errors['correo']">El email debe ser un email valido</div>
+    </div><br>
+
+    <label>Nombre:</label><br>
+    <input class="form-control" value="{{this.perfil.persona.nombre}}" formControlName="nombre">
+    <div *ngIf="submitted && formulario['nombre'].errors">
+        <div *ngIf="formulario['nombre'].errors['required']">El nombre no puede estar vacio</div>
+    </div> <br>
+
+
+    <label>Contraseña:</label><br>
+    <input value="{{this.perfil.persona.password1}}" type="password" id="exampleInputPassword1" formControlName="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+    <div *ngIf="submitted && formulario['password1'].errors">
+        <div *ngIf="formulario['password1'].errors['required']"> La contraseña no puede estar vacia</div>
+        <div *ngIf="formulario['password1'].errors['pattern']">La contraseña debe tener al menos un dígito, una minúscula, una mayúscula y tener como mínimo 8 caracteres</div>
+    </div><br>
+
+
+    <label for="exampleInputEmail1">Repetir Contraseña:</label><br>
+    <input value="{{this.perfil.persona.password2}}" type="password" id="exampleInputPassword1" formControlName="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+    <div *ngIf="submitted && formulario['password2'].errors">
+        <div *ngIf="formulario['password2'].errors['required']"> La contraseña no puede estar vacia</div>
+        <div *ngIf="formulario['password2'].errors['pattern']">La contraseña debe tener al menos un dígito, una minúscula, una mayúscula y tener como mínimo 8 caracteres</div>
+    </div><br>
+
+
+
+
+    <label class="form-label" for="exampleInputEmail1">Rol:</label><br>
+    <select class="form-select" aria-label="Default select example" formControlName="id_rol">
+          <option value="1" selected>Administrador</option>
+          <option value="2">Usuario</option>
+          <div *ngIf="submitted && formulario['id_rol'].errors">
+            <div *ngIf="formulario['id_rol'].errors['required']">El rol no puede estar vacio</div>
+          </div>
+        </select><br><br>
+
+
+
+    <button style="width: 300px;height: 50px;" type="submit" (click)="editar()">Editar</button><br><br>
+    <button style="width: 300px;height: 50px;" type="submit" (click)="onVolver()">Volver</button>
+
+</form>
