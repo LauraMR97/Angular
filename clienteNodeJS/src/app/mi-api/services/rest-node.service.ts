@@ -64,16 +64,14 @@ public darCorreoPersonaRegistrandose(correo: string){
 }
 
 
-public borrarUsuario(correo:string){
-  console.log(correo);
-  const url: string="http://localhost:8090/api/admin/borrar";
+public borrarUsuario(email:string){
+  const url: string="http://localhost:8090/api/admin/borrar/"+email;
   let headers= new HttpHeaders({
     'Content-Type' : 'application/json',
     'x-access-token': `${sessionStorage.getItem('token')}`,
     'roles': this.rolAsignado.value
   });
-  let dato= {email:correo};
-  return this.http.post(url,dato,{headers: headers});
+  return this.http.delete(url,{headers: headers});
 }
 
 public editarUser(perfil: UserEdit){
@@ -115,15 +113,14 @@ public getUsuarios(){
   );
 }
 
-public getUser(correo: string){
-  let dato = {email: correo};
-  let url: string="http://localhost:8090/api/admin/verUsuario";
+public getUser(email: string){
+  let url: string="http://localhost:8090/api/admin/verUsuario/"+email;
   let headers= new HttpHeaders({
     'Content-Type' : 'application/json',
     'x-access-token': `${sessionStorage.getItem('token')}`,
     'roles': this.rolAsignado.value
   });
-  return this.http.post<UserCreate>(url,dato,{headers:headers}).pipe(
+  return this.http.get<UserCreate>(url,{headers:headers}).pipe(
   );
 }
 
